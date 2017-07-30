@@ -1,0 +1,195 @@
+﻿<Page
+    x:Class="PictDIFFER.Views.About_Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PictDIFFER.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loading="Page_Loading">
+
+    <!--Define Main Row-->
+    <Grid Background="#808080">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Header Menu-->
+        <!--Main Row 1-->
+        <StackPanel Grid.Row="0" Margin="18,15,15,15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="&#xEA80;" FontFamily="Segoe MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                </StackPanel>
+                <Rectangle Grid.Column="1" Margin="15,0,15,0" Width="2" Height="Auto" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                <TextBlock x:Name="HeaderInfo" Grid.Column="2" Margin="5,0,5,0" Style="{StaticResource BaseTextBlockStyle}" FontStretch="SemiCondensed"/>
+            </Grid>
+        </StackPanel>
+        <!--Header Menu-->
+        <!--Main Row 1-->
+
+        <!--Line Horizontal-->
+        <!--Main Row 2-->
+        <StackPanel Grid.Row="1" Margin="50,5,50,5">
+            <Rectangle Margin="125,0,125,0" Width="Auto" Height="2" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+            <Rectangle Margin="50,0,50,0" Width="Auto" Height="1" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+            <Rectangle Margin="125,0,125,0" Width="Auto" Height="2" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+        </StackPanel>
+        <!--Line Horizontal-->
+        <!--Main Row 2-->
+
+        <!--Pivot Menu-->
+        <!--Main Row 3-->
+        <Pivot Grid.Row="2">
+            <!--Pivot 1-->
+            <PivotItem Header="App Detail" Margin="0,0,0,0">
+                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--Pivot 1 Column 1-->
+                    <StackPanel Grid.Column="0" Margin="15,20,0,0">
+                        <TextBlock Text="&#xEA86;" FontFamily="Segoe MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                    </StackPanel>
+                    <!--Pivot 1 Column 1-->
+
+                    <!--Pivot 1 Column 2-->
+                    <Rectangle Grid.Column="1" Margin="15,20,0,20" Width="2" Height="Auto" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                    <!--Pivot 1 Column 2-->
+
+                    <!--Pivot 1 Column 3-->
+                    <ScrollViewer Grid.Column="2" Margin="15,20,0,20" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <StackPanel>
+                            <Grid Margin="15,0,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Border x:Name="Logo_Black" BorderThickness="1" BorderBrush="Black" Grid.Column="0" Grid.Row="0" Visibility="Collapsed">
+                                    <Image Width="Auto" Source="../Assets/MyLogo_B.png" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                </Border>
+                                <Border x:Name="Logo_White" BorderThickness="1" BorderBrush="White" Grid.Column="0" Grid.Row="0" Visibility="Collapsed">
+                                    <Image Width="Auto" Source="../Assets/MyLogo_W.png" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                </Border>
+                                <TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Grid.Row="0" Grid.Column="1"  Margin="15,0,0,0">
+                                    <Run x:Name="lbl_Title_AppDetail"/>
+                                </TextBlock>
+                            </Grid>
+                            <Grid Margin="15,25,15,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Margin="0,0,0,15" Grid.Row="0" x:Name="lbl_Version_AppDetail" Style="{StaticResource BaseTextBlockStyle}"/>
+                                <HyperlinkButton Grid.Row="1" x:Name="lbl_Source_Code_AppDetail" Click="HyperlinkButton_Click"/>
+                                <HyperlinkButton Grid.Row="2" x:Name="lbl_Bug_Support_AppDetail" Click="HyperlinkButton_Click"/>
+                            </Grid>
+                        </StackPanel>
+                    </ScrollViewer>
+                    <!--Pivot 1 Column 3-->
+                </Grid>
+            </PivotItem>
+            <!--Pivot 1-->
+
+            <!--Pivot 2-->
+            <PivotItem Header="About Me" Margin="0,0,0,0">
+                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--Pivot 2 Column 1-->
+                    <StackPanel Grid.Column="0" Margin="15,20,0,0">
+                        <TextBlock Text="&#xEE57;" FontFamily="Segoe MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                    </StackPanel>
+                    <!--Pivot 2 Column 1-->
+
+                    <!--Pivot 2 Column 2-->
+                    <Rectangle Grid.Column="1" Margin="15,20,0,20" Width="2" Height="Auto" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                    <!--Pivot 2 Column 2-->
+
+                    <!--Pivot 2 Column 3-->
+                    <ScrollViewer Grid.Column="2" Margin="15,20,0,20" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <StackPanel>
+                            <Grid Margin="15,0,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Image Grid.Column="0" Grid.Row="0" Width="Auto" Source="../Assets/MyPicture.jpg" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                <TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Grid.Row="0" Grid.Column="1"  Margin="15,0,0,0">
+                                    <Run x:Name="lbl_Title_AboutMe"/>
+                                </TextBlock>
+                            </Grid>
+                            <Grid Margin="15,15,15,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" Style="{StaticResource TitleTextBlockStyle}">
+                                    <Run Text="&#xE13D;" FontFamily="Segoe MDL2 Assets"/>
+                                    <Run x:Name="lbl_Head1_AboutMe"/>
+                                </TextBlock>
+                            </Grid>
+                            <Grid Margin="15,5,15,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" Style="{StaticResource BaseTextBlockStyle}">
+                                    <Run x:Name="lbl_Name_AboutMe"/><LineBreak/>
+                                    <Run x:Name="lbl_Birth_AboutMe"/><LineBreak/>
+                                    <Run x:Name="lbl_Domicile_AboutMe"/>
+                                </TextBlock>
+                            </Grid>
+                            <Grid Margin="15,15,15,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" Style="{StaticResource TitleTextBlockStyle}">
+                                    <Run Text="&#xE7BE;" FontFamily="Segoe MDL2 Assets"/>
+                                    <Run x:Name="lbl_Head2_AboutMe"/>
+                                </TextBlock>
+                            </Grid>
+                            <Grid Margin="15,5,15,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" Style="{StaticResource BaseTextBlockStyle}">
+                                    <Run x:Name="lbl_School_TK_AboutMe"/><LineBreak/>
+                                    <Run x:Name="lbl_School_SD_AboutMe"/><LineBreak/>
+                                    <Run x:Name="lbl_School_SMP_AboutMe"/><LineBreak/>
+                                    <Run x:Name="lbl_School_SMK_AboutMe"/><LineBreak/>
+                                    <Run x:Name="lbl_University_AboutMe"/>
+                                </TextBlock>
+                            </Grid>
+                        </StackPanel>
+                    </ScrollViewer>
+                    <!--Pivot 2 Column 3-->
+                </Grid>
+            </PivotItem>
+            <!--Pivot 2-->
+        </Pivot>
+        <!--Pivot Menu-->
+        <!--Main Row 3-->
+    </Grid>
+    <!--Define Main Row-->
+</Page>
+
