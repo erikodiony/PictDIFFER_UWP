@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -27,19 +28,13 @@ namespace PictDIFFER.Views.Popup
             InitializeComponent();
         }
 
-        #region SetTheme
-        private void Init_Theme()
-        {
-            string value = (string)ApplicationData.Current.LocalSettings.Values["BG_set"];
-            var setTheme = Process.Theme.GetTheme(value) == true ? RequestedTheme = ElementTheme.Light : RequestedTheme = ElementTheme.Dark;
-            Process.Theme.SetTheme(setTheme.ToString());
-        }
-        #endregion
-
         private void ContentDialog_Loading(FrameworkElement sender, object args)
         {
             lbl_msg.Text = Message;
             lbl_detail.Text = Detail;
+            p_ring.Foreground = new SolidColorBrush(Colors.White);
+            lbl_msg.Foreground = new SolidColorBrush(Colors.White);
+            lbl_detail.Foreground = new SolidColorBrush(Colors.White);
         }
     }
 }

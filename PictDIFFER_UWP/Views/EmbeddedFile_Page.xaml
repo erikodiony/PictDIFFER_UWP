@@ -83,7 +83,7 @@
                     <!--Pivot 1 Footer Menu Embed File-->
                     <RelativePanel Grid.ColumnSpan="3">
                         <Grid x:Name="embedded_FooterMenu" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
-                            <CommandBar Background="{ThemeResource SystemControlForegroundAccentBrush}" IsOpen="False">
+                            <CommandBar RequestedTheme="Dark" Background="{ThemeResource SystemControlForegroundAccentBrush}" IsOpen="False">
                                 <AppBarButton x:Name="embedded_btn_ClearAll_FooterMenu" Icon="Cancel" Click="embedded_btn_ClearAll_FooterMenu_Click"/>
                                 <AppBarButton x:Name="embedded_btn_Execute_FooterMenu" Icon="Play" Click="embedded_btn_Execute_FooterMenu_Click"/>
                             </CommandBar>

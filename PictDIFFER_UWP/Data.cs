@@ -107,6 +107,7 @@ namespace PictDIFFER
         {
             public static readonly string OK = "OK";
             public static readonly string Cancel = "Cancel";
+            public static readonly string Close = "Close";
             public static readonly string Save = "Save";
             public static readonly string Clear = "Clear";
             public static readonly string ClearAll = "Clear All";
@@ -232,6 +233,15 @@ namespace PictDIFFER
             public static readonly string PSNR_R = "PSNR_R";
             public static readonly string PSNR_A = "PSNR_A";
             public static readonly string PSNR_ALL = "PSNR_ALL";
+
+            public static readonly string CVR_B = "CVR_B";
+            public static readonly string CVR_G = "CVR_G";
+            public static readonly string CVR_R = "CVR_R";
+            public static readonly string CVR_A = "CVR_A";
+            public static readonly string STG_B = "STG_B";
+            public static readonly string STG_G = "STG_G";
+            public static readonly string STG_R = "STG_R";
+            public static readonly string STG_A = "STG_A";
         }
         #endregion
     }

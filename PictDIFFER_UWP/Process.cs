@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Windows.Graphics.Imaging;
 using Windows.Security.Cryptography;
@@ -11,10 +10,17 @@ using Windows.Storage;
 using Windows.Storage.FileProperties;
 using Windows.Storage.Pickers;
 using Windows.Storage.Streams;
+using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Media.Imaging;
+
 using static PictDIFFER.Data.Prop_Popup;
 using static PictDIFFER.Data.Prop_Popup.Title;
+
+//using Windows.UI.Xaml.Media;
+//using Accord.Imaging;
+using AForge.Imaging;
+using System.Drawing;
 
 namespace PictDIFFER
 {
@@ -304,7 +310,7 @@ namespace PictDIFFER
                 pl.Show(true, Data.Misc.WorkingOnIt, String.Empty);
                 if (nameTest == Data.Misc.Stego1)
                 {
-                    x = Task.Run(() => HistogramData.Run());
+                    x = HistogramData.Run();
                     await x;
                 }
                 else if (nameTest == Data.Misc.Stego2)
@@ -325,11 +331,11 @@ namespace PictDIFFER
 
                         if (nameTest == Data.Misc.Stego1)
                         {
-
+                            await PopupDialog.StegoImage.Histogram_Show(nameTest);
                         }
                         else if (nameTest == Data.Misc.Stego2)
                         {
-
+                            //await PopupDialog.StegoImage.MSEandPSNR_Show(nameTest);
                         }
                         else
                         {
@@ -340,14 +346,91 @@ namespace PictDIFFER
                         break;
                 }
             }
-
+            #region HistogramData
             public class HistogramData
             {
                 public static async Task Run()
                 {
+                    var cover = (StorageFile)GetData.Storage[Data.Misc.CVR];
+                    var stego = (StorageFile)GetData.Storage[Data.Misc.STG];
+                    var bmp_cvr = await CreateBitmap(cover);
+                    var bmp_stg = await CreateBitmap(stego);
+                    Calculate(bmp_cvr, Data.Misc.CVR);
+                    Calculate(bmp_stg, Data.Misc.STG);
                     await Task.Delay(6000);
                 }
+                public static async Task<Bitmap> CreateBitmap(StorageFile img)
+                {
+                    ImageProperties prop = await img.Properties.GetImagePropertiesAsync();
+
+                    WriteableBitmap wrt = new WriteableBitmap((int)prop.Width, (int)prop.Height);
+                    using (var stream = await img.OpenAsync(FileAccessMode.Read))
+                    {
+                        wrt.SetSource(stream);
+                    }
+                    return (Bitmap)wrt;
+                }
+                public static PointCollection CreatePoint(int[] point)
+                {
+                    var values = SmoothHistogram(point);
+                    //var values = point;
+                    int max = values.Max();
+                    PointCollection dots = new PointCollection();
+                    dots.Add(new Windows.Foundation.Point(0, max));
+                    for (int i = 0; i < values.Length; i++)
+                    {
+                        dots.Add(new Windows.Foundation.Point(i, max - values[i]));
+                    }
+                    dots.Add(new Windows.Foundation.Point(values.Length - 1, max));
+                    return dots;
+                }
+                public static int[] SmoothHistogram(int[] value)
+                {
+                    int[] smoothedValues = new int[value.Length];
+
+                    double[] mask = new double[] { 0.25, 0.5, 0.25 };
+
+                    for (int bin = 1; bin < value.Length - 1; bin++)
+                    {
+                        double smoothedValue = 0;
+                        for (int i = 0; i < mask.Length; i++)
+                        {
+                            smoothedValue += value[bin - 1 + i] * mask[i];
+                        }
+                        smoothedValues[bin] = (int)smoothedValue;
+                    }
+                    return smoothedValues;
+                }
+                public static void Calculate(Bitmap img, string type)
+                {
+                    using (img)
+                    {
+                        ImageStatistics rgb_Statistics_Cover = new ImageStatistics(img);
+                        var Blue = CreatePoint(rgb_Statistics_Cover.Blue.Values);
+                        var Green = CreatePoint(rgb_Statistics_Cover.Green.Values);
+                        var Red = CreatePoint(rgb_Statistics_Cover.Red.Values);
+
+                        switch (type)
+                        {
+                            case "CVR":
+                                GetData.DataResult.Add(Data.Misc.CVR_B, Blue);
+                                GetData.DataResult.Add(Data.Misc.CVR_G, Green);
+                                GetData.DataResult.Add(Data.Misc.CVR_R, Red);
+                                break;
+                            case "STG":
+                                GetData.DataResult.Add(Data.Misc.STG_B, Blue);
+                                GetData.DataResult.Add(Data.Misc.STG_G, Green);
+                                GetData.DataResult.Add(Data.Misc.STG_R, Red);
+                                break;
+                            default:
+                                break;
+                        }
+
+                    }
+                }
             }
+            #endregion
+            #region PixelIdentify
             public class PixelIdentify
             {
                 public static async Task Run()
@@ -355,6 +438,7 @@ namespace PictDIFFER
                     await Task.Delay(6000);
                 }
             }
+            #endregion
             #region MSEandPSNR
             public class MSEandPSNR
             {

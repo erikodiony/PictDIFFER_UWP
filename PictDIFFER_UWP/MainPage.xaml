@@ -16,7 +16,7 @@
             <Style TargetType="RadioButton" BasedOn="{StaticResource SplitViewRadioButtonStyle}" />
         </ResourceDictionary>
     </Page.Resources>
-    
+
     <Grid>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>

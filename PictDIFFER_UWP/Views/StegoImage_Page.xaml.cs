@@ -132,7 +132,7 @@ namespace PictDIFFER.Views
         private void stego_btn_Execute_FooterMenu_Click(object sender, RoutedEventArgs e)
         {
             Exec();
-            //await PopupDialog.StegoImage.MSEandPSNR_Show(Data.Misc.Stego3);
+            //await PopupDialog.StegoImage.Histogram_Show(Data.Misc.Stego1);
         }
 
         private async void CVR_btn_input_stego_Click(object sender, RoutedEventArgs e)

@@ -1,4 +1,8 @@
 ﻿using System;
+using Windows.Foundation.Metadata;
+using Windows.Storage;
+using Windows.UI;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -39,7 +43,7 @@ namespace PictDIFFER
                 switch (button.Content.ToString())
                 {
                     case "Home":
-                        Info_Page.Visibility = Visibility.Collapsed;
+                        Info_Page.Visibility = Visibility.Visible;
                         MyFrame.Navigate(typeof(Views.Home_Page));
                         break;
                     case "Stego Image Test":
@@ -68,17 +72,11 @@ namespace PictDIFFER
         }
 
         // show the StatusBar
-        private async void ShowStatusBar()
+        public static void ShowStatusBar()
         {
-            // turn on SystemTray for mobile
-            // don't forget to add a Reference to Windows Mobile Extensions For The UWP
-            if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
+            if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
             {
-                var statusbar = Windows.UI.ViewManagement.StatusBar.GetForCurrentView();
-                await statusbar.ShowAsync();
-                statusbar.BackgroundColor = Windows.UI.Colors.Transparent;
-                statusbar.BackgroundOpacity = 1;
-                statusbar.ForegroundColor = Windows.UI.Colors.Black;
+                var statusBar = StatusBar.GetForCurrentView();
             }
         }
 

@@ -52,7 +52,7 @@ namespace PictDIFFER
                 Result_EmbeddedFile re = new Result_EmbeddedFile()
                 {
                     Title = String.Format("{0} | {1}", Prop_Popup.Title.Status.Result, type),
-                    PrimaryButtonText = Prop_Button.OK,
+                    PrimaryButtonText = Prop_Button.Close,
                 };
                 await re.ShowAsync();               
             }
@@ -64,10 +64,20 @@ namespace PictDIFFER
                 Result_MSEandPSNR rm = new Result_MSEandPSNR()
                 {
                     Title = String.Format("{0} | {1}", Prop_Popup.Title.Status.Result, type),
-                    PrimaryButtonText = Prop_Button.OK,
+                    PrimaryButtonText = Prop_Button.Close,
                 };
                 await rm.ShowAsync();
             }
+            public static async Task Histogram_Show(string type)
+            {
+                Result_Histogram rh = new Result_Histogram()
+                {
+                    Title = String.Format("{0} | {1}", Prop_Popup.Title.Status.Result, type),
+                    PrimaryButtonText = Prop_Button.Close,
+                };
+                await rh.ShowAsync();
+            }
+
         }
     }
 }

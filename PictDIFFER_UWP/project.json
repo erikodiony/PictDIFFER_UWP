@@ -1,7 +1,8 @@
 ﻿{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0",
-    "portable.aforge.imaging": "2.2.5.60302"
+    "portable.aforge.imaging": "2.2.5.60302",
+    "shim.drawing": "3.0.1"
   },
   "frameworks": {
     "uap10.0": {}
