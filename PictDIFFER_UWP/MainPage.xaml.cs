@@ -1,5 +1,6 @@
 ﻿using System;
 using Windows.Foundation.Metadata;
+using Windows.Graphics.Display;
 using Windows.Storage;
 using Windows.UI;
 using Windows.UI.ViewManagement;

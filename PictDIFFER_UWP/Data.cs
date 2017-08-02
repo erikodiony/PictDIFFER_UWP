@@ -19,7 +19,6 @@ namespace PictDIFFER
         #region Property Page
         public static class Prop_Page
         {
-            public static readonly string HomePage = "WELCOME";
             public static readonly string StegoPage = "Menu yang berfungsi untuk menguji hasil keluaran dari proses Embedding Steganography (Stego Image), Jenis uji yang digunakan yakni Histogram, Pixel Identify dan MSE & PSNR";
             public static readonly string EmbeddedPage = "Menu yang berfungsi untuk menguji hasil keluaran dari proses Extracting Steganography (Embedded File), Jenis uji yang digunakan yakni MD5 Checksum";
             public static readonly string SettingsPage = "Menu yang berfungsi untuk mengganti Warna Latar Belakang (Change Background) beserta mengganti Efek Transisi Halaman (Change Transition Effect)";

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Graphics.Display;
 using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -32,7 +33,6 @@ namespace PictDIFFER.Views
         {
             Init_Theme();
             Init_Transition();
-            HeaderInfo.Text = Data.Prop_Page.HomePage;
         }
 
         #region Initializing Animation
@@ -49,5 +49,10 @@ namespace PictDIFFER.Views
             Process.Theme.SetTheme(setTheme.ToString());
         }
         #endregion
+
+        private void Page_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            HeaderBanner.MaxHeight = this.ActualHeight / 4;
+        }
     }
 }
