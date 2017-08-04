@@ -6,12 +6,72 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Title="TITLE"
-    PrimaryButtonText="Button1"
-    SecondaryButtonText="Button2"
-    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
-    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+    Loading="ContentDialog_Loading">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="0,20,0,15">
+            <Rectangle Width="Auto" Height="5" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Margin="10,0,0,0" HorizontalAlignment="Stretch">
+                <TextBlock  Text="&#xF0B9;" FontFamily="Segoe MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
+            </StackPanel>
+            <Rectangle Grid.Column="1" Margin="10,0,0,0" Width="2" Height="Auto" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+            <ScrollViewer Grid.Column="2" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid Margin="5" Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="150"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Margin="8,0,0,0" Text="Cover Image" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                        <Grid Grid.Row="1" Margin="8,5,8,5">
+                            <Rectangle Width="Auto" Height="3" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                        </Grid>
+                        <Border x:Name="CVR_border" Grid.Row="2" BorderThickness="1" RequestedTheme="Default" Margin="15,5,15,5" Opacity="0.75">
+                        </Border>
+                    </Grid>
+                    <StackPanel Grid.Row="1" Margin="50,15,50,10">
+                        <Rectangle Margin="100,0,100,0" Width="Auto" Height="2" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                        <Rectangle Margin="50,0,50,0" Width="Auto" Height="1" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                        <Rectangle Margin="100,0,100,0" Width="Auto" Height="2" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                    </StackPanel>
+                    <Grid Margin="5" Grid.Row="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="150"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Margin="8,0,0,0" Text="Stego Image" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                        <Grid Grid.Row="1" Margin="8,5,8,5">
+                            <Rectangle Width="Auto" Height="3" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                        </Grid>
+                        <Border x:Name="STG_border" Grid.Row="2" BorderThickness="1" RequestedTheme="Default" Margin="15,5,15,5" Opacity="0.75">
+                        </Border>
+                    </Grid>
+                    <StackPanel Grid.Row="3" Margin="50,15,50,10">
+                        <Rectangle Margin="100,0,100,0" Width="Auto" Height="2" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                        <Rectangle Margin="50,0,50,0" Width="Auto" Height="1" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                        <Rectangle Margin="100,0,100,0" Width="Auto" Height="2" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </ContentDialog>

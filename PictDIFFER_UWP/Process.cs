@@ -335,7 +335,7 @@ namespace PictDIFFER
                         }
                         else if (nameTest == Data.Misc.Stego2)
                         {
-                            //await PopupDialog.StegoImage.MSEandPSNR_Show(nameTest);
+                            await PopupDialog.StegoImage.Pixel_Show(nameTest);
                         }
                         else
                         {

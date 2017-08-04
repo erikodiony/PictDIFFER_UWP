@@ -1,6 +1,7 @@
 ﻿{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0",
+    "MyToolkit.Extended": "2.5.16",
     "portable.aforge.imaging": "2.2.5.60302",
     "shim.drawing": "3.0.1"
   },

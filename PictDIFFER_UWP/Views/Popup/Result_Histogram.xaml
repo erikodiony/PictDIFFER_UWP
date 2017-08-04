@@ -8,7 +8,6 @@
     mc:Ignorable="d"
     Loading="ContentDialog_Loading">
 
-    <!--Column 3 / Content Area-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

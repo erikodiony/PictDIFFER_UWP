@@ -30,18 +30,6 @@ namespace PictDIFFER
         {
             InitializeComponent();
             Suspending += OnSuspending;
-
-            //var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
-            //Object val = localSettings.Values["BG_set"];
-            //if ((string)val == "Dark")
-            //{
-            //    RequestedTheme = ApplicationTheme.Dark;
-            //}
-            //else
-            //{
-            //    RequestedTheme = ApplicationTheme.Light;
-            //}
-
         }
 
         /// <summary>
@@ -54,7 +42,7 @@ namespace PictDIFFER
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
-                this.DebugSettings.EnableFrameRateCounter = true;
+                this.DebugSettings.EnableFrameRateCounter = false;
             }
 #endif
             Frame rootFrame = Window.Current.Content as Frame;

@@ -77,7 +77,15 @@ namespace PictDIFFER
                 };
                 await rh.ShowAsync();
             }
-
+            public static async Task Pixel_Show(string type)
+            {
+                Result_Pixel rh = new Result_Pixel()
+                {
+                    Title = String.Format("{0} | {1}", Prop_Popup.Title.Status.Result, type),
+                    PrimaryButtonText = Prop_Button.Close,
+                };
+                await rh.ShowAsync();
+            }
         }
     }
 }

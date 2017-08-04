@@ -21,15 +21,12 @@ namespace PictDIFFER.Views.Popup
     {
         public Result_Pixel()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
-        private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        private void ContentDialog_Loading(FrameworkElement sender, object args)
         {
-        }
 
-        private void ContentDialog_SecondaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
-        {
         }
     }
 }

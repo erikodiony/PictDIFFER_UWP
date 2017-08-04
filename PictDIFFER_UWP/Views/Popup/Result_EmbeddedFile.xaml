@@ -8,58 +8,59 @@
     mc:Ignorable="d"
     Loading="ContentDialog_Loading">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Margin="0,20,0,15">
-            <Rectangle Width="Auto" Height="5" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Grid Grid.Row="0" Margin="0,20,0,15">
+        <Rectangle Width="Auto" Height="5" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+    </Grid>
+    <Grid Grid.Row="1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Margin="10,0,0,0" HorizontalAlignment="Stretch">
+            <TextBlock  Text="&#xE8D7;" FontFamily="Segoe MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Stretch">
-            <ScrollViewer HorizontalScrollMode="Auto" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" VerticalScrollMode="Disabled">
-                <Grid>
+        <Rectangle Grid.Column="1" Margin="10,0,0,0" Width="2" Height="Auto" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
+        <ScrollViewer Grid.Column="2" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+            <Grid Margin="10,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Margin="5" Grid.Row="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <StackPanel Grid.Row="0" Margin="15,0,15,0" HorizontalAlignment="Stretch">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <StackPanel Grid.Column="0" Margin="0,0,15,0">
-                                <TextBlock Text="&#xE8D7;" FontFamily="Segoe MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
-                            </StackPanel>
-                            <StackPanel Grid.Column="1">
-                                <StackPanel HorizontalAlignment="Stretch">
-                                    <TextBlock x:Name="lbl_title_origin" Style="{StaticResource SubtitleTextBlockStyle}"/>
-                                    <TextBlock x:Name="lbl_hash_origin" Style="{StaticResource BaseTextBlockStyle}"/>
-                                </StackPanel>
-                                <StackPanel Margin="0,5,0,0" HorizontalAlignment="Stretch">
-                                    <TextBlock x:Name="lbl_title_embedded" Style="{StaticResource SubtitleTextBlockStyle}"/>
-                                    <TextBlock x:Name="lbl_hash_embedded" Style="{StaticResource BaseTextBlockStyle}"/>
-                                </StackPanel>
-                            </StackPanel>
-                        </Grid>
+                    <StackPanel Grid.Row="0" HorizontalAlignment="Stretch">
+                        <StackPanel>
+                            <TextBlock x:Name="lbl_title_origin" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                            <TextBlock x:Name="lbl_hash_origin" Style="{StaticResource BaseTextBlockStyle}"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,5,0,0">
+                            <TextBlock x:Name="lbl_title_embedded" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                            <TextBlock x:Name="lbl_hash_embedded" Style="{StaticResource BaseTextBlockStyle}"/>
+                        </StackPanel>
                     </StackPanel>
-                    <StackPanel Grid.Row="1" Margin="50,10,50,5" HorizontalAlignment="Stretch">
+                    <StackPanel Grid.Row="1" Margin="25,10,25,5" HorizontalAlignment="Stretch">
                         <Rectangle Width="Auto" Height="2" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
                     </StackPanel>
-                    <StackPanel Grid.Row="2" HorizontalAlignment="Center">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock x:Name="lbl_icon" Margin="3,0,5,0" Grid.Column="0" HorizontalAlignment="Center" FontFamily="Wingdings" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
-                            <TextBlock x:Name="lbl_result" Margin="5,4,3,0" Grid.Column="1" HorizontalAlignment="Center" Style="{StaticResource SubtitleTextBlockStyle}"/>
-                        </Grid>
-                    </StackPanel>
+                    <Grid Grid.Row="2" HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="lbl_icon" Margin="3,0,5,0" Grid.Column="0" HorizontalAlignment="Center" FontFamily="Wingdings" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                        <TextBlock x:Name="lbl_result" Margin="5,4,3,0" Grid.Column="1" HorizontalAlignment="Center" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                    </Grid>
                 </Grid>
-            </ScrollViewer>
-        </StackPanel>
+                </Grid>
+        </ScrollViewer>
     </Grid>
+</Grid>
 </ContentDialog>
