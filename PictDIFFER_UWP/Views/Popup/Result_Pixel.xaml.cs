@@ -1,10 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.Storage;
 using MyToolkit.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI;
+using System.Threading.Tasks;
+using Windows.Storage.Streams;
+using Windows.Graphics.Imaging;
 
 // The Content Dialog item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -12,10 +16,18 @@ namespace PictDIFFER.Views.Popup
 {
     public sealed partial class Result_Pixel : ContentDialog
     {
+        public List<int> limit = new List<int>()
+        {
+            100,
+            250,
+            500,
+        };
+
         public Result_Pixel()
         {
             InitializeComponent();
-            ViewBinding(50);
+            cmb.ItemsSource = limit;
+            cmb.SelectedIndex = 0;
         }
 
         #region SetTheme
@@ -41,9 +53,10 @@ namespace PictDIFFER.Views.Popup
         }
         #endregion
 
-        private void ContentDialog_Loading(FrameworkElement sender, object args)
+        private async void ContentDialog_Loading(FrameworkElement sender, object args)
         {
             Init_Theme();
+            await ViewBinding(100);
         }
 
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
@@ -51,7 +64,7 @@ namespace PictDIFFER.Views.Popup
             Process.GetData.DataResult.Clear();
         }
 
-        private void ViewBinding(int limit)
+        private async Task ViewBinding(int limit)
         {
             var CVR_List = new List<Point_CVR>();
             var STG_List = new List<Point_STG>();
@@ -75,8 +88,53 @@ namespace PictDIFFER.Views.Popup
                     STG_A = ((byte[])Process.GetData.DataResult[Data.Misc.STG_A])[i].ToString(),
                 });
             }
+
+            await Task.Delay(3500);
+
             CVR_DataGrid.ItemsSource = CVR_List;
             STG_DataGrid.ItemsSource = STG_List;
+        }
+
+        private async Task ViewBindingCustom(string x, string y)
+        {
+            var CVR_List = new List<Point_CVR>();
+            var STG_List = new List<Point_STG>();
+
+            int point_CVR = Array.IndexOf(((string[])Process.GetData.DataResult[Data.Misc.CVR_XY]), String.Format("{0},{1}", x, y));
+            int point_STG = Array.IndexOf(((string[])Process.GetData.DataResult[Data.Misc.STG_XY]), String.Format("{0},{1}", x, y));
+
+            if (point_CVR > -1 && point_STG > -1)
+            {
+                p_ring_xy.Visibility = Visibility.Visible;
+
+                CVR_List.Add(new Point_CVR()
+                {
+                    CVR_XY = ((string[])Process.GetData.DataResult[Data.Misc.CVR_XY])[point_CVR],
+                    CVR_B = ((byte[])Process.GetData.DataResult[Data.Misc.CVR_B])[point_CVR].ToString(),
+                    CVR_G = ((byte[])Process.GetData.DataResult[Data.Misc.CVR_G])[point_CVR].ToString(),
+                    CVR_R = ((byte[])Process.GetData.DataResult[Data.Misc.CVR_R])[point_CVR].ToString(),
+                    CVR_A = ((byte[])Process.GetData.DataResult[Data.Misc.CVR_A])[point_CVR].ToString(),
+                });
+
+                STG_List.Add(new Point_STG()
+                {
+                    STG_XY = ((string[])Process.GetData.DataResult[Data.Misc.STG_XY])[point_STG],
+                    STG_B = ((byte[])Process.GetData.DataResult[Data.Misc.STG_B])[point_STG].ToString(),
+                    STG_G = ((byte[])Process.GetData.DataResult[Data.Misc.STG_G])[point_STG].ToString(),
+                    STG_R = ((byte[])Process.GetData.DataResult[Data.Misc.STG_R])[point_STG].ToString(),
+                    STG_A = ((byte[])Process.GetData.DataResult[Data.Misc.STG_A])[point_STG].ToString(),
+                });
+
+                await Task.Delay(3500);
+                CVR_DataGrid.ItemsSource = CVR_List;
+                STG_DataGrid.ItemsSource = STG_List;
+            }
+            else
+            {
+                lbl_err.Visibility = Visibility.Visible;
+                await Task.Delay(3500);
+                lbl_err.Visibility = Visibility.Collapsed;
+            }
         }
 
         #region for Data Binding
@@ -99,5 +157,24 @@ namespace PictDIFFER.Views.Popup
         }
         #endregion
 
+        private async void cmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            p_ring_limit.Visibility = Visibility.Visible;
+            Task x = ViewBinding(int.Parse(cmb.SelectedValue.ToString()));
+            await x;
+            if (x.IsCompleted) p_ring_limit.Visibility = Visibility.Collapsed;
+        }
+
+        private void btn_point_Click(object sender, RoutedEventArgs e)
+        {
+            CheckPoint();
+        }
+
+        private async void CheckPoint()
+        {
+            Task x = ViewBindingCustom(tbox_x.Text, tbox_y.Text);
+            await x;
+            if (x.IsCompleted) p_ring_xy.Visibility = Visibility.Collapsed;
+        }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.Graphics.Imaging;
@@ -17,8 +16,6 @@ using Windows.UI.Xaml.Media.Imaging;
 using static PictDIFFER.Data.Prop_Popup;
 using static PictDIFFER.Data.Prop_Popup.Title;
 
-//using Windows.UI.Xaml.Media;
-//using Accord.Imaging;
 using AForge.Imaging;
 using System.Drawing;
 
