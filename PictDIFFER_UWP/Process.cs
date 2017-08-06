@@ -435,8 +435,65 @@ namespace PictDIFFER
             {
                 public static async Task Run()
                 {
+                    await GetPixel((StorageFile)GetData.Storage[Data.Misc.CVR], "CVR");
+                    await GetPixel((StorageFile)GetData.Storage[Data.Misc.STG], "STG");
                     await Task.Delay(6000);
                 }
+                public static async Task GetPixel(StorageFile file, string type)
+                {
+                    IRandomAccessStream ram;
+                    byte[] pixel;
+
+                    List<byte> B = new List<byte>();
+                    List<byte> G = new List<byte>();
+                    List<byte> R = new List<byte>();
+                    List<byte> A = new List<byte>();
+                    List<string> XY = new List<string>();
+
+                    int point;
+                    using (ram = await file.OpenAsync(FileAccessMode.ReadWrite))
+                    {
+                        var dec = await BitmapDecoder.CreateAsync(ram);
+                        pixel = (await dec.GetPixelDataAsync()).DetachPixelData();
+
+                        int index = 0;
+                        for (int y = 0; y <dec.PixelHeight; y++)
+                        {
+                            for (int x = 0; x < dec.PixelWidth; x++)
+                            {
+                                point = ((y * (int)dec.PixelWidth + x) * 4);
+                                B.Add(pixel[point + 0]);
+                                G.Add(pixel[point + 1]);
+                                R.Add(pixel[point + 2]);
+                                A.Add(pixel[point + 3]);
+                                XY.Add(String.Format("{0},{1}", x+1, y+1));
+                                index++;
+                            }
+                        }                       
+                    }
+
+                    switch(type)
+                    {
+                        case "CVR":
+                            GetData.DataResult.Add(Data.Misc.CVR_B, B.ToArray());
+                            GetData.DataResult.Add(Data.Misc.CVR_G, G.ToArray());
+                            GetData.DataResult.Add(Data.Misc.CVR_R, R.ToArray());
+                            GetData.DataResult.Add(Data.Misc.CVR_A, A.ToArray());
+                            GetData.DataResult.Add(Data.Misc.CVR_XY, XY.ToArray());
+                            break;
+                        case "STG":
+                            GetData.DataResult.Add(Data.Misc.STG_B, B.ToArray());
+                            GetData.DataResult.Add(Data.Misc.STG_G, G.ToArray());
+                            GetData.DataResult.Add(Data.Misc.STG_R, R.ToArray());
+                            GetData.DataResult.Add(Data.Misc.STG_A, A.ToArray());
+                            GetData.DataResult.Add(Data.Misc.STG_XY, XY.ToArray());
+                            break;
+                        default:
+                            break;
+                    }
+
+                }
+
             }
             #endregion
             #region MSEandPSNR

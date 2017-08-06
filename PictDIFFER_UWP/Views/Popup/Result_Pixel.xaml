@@ -6,7 +6,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Loading="ContentDialog_Loading">
+    xmlns:paging="using:MyToolkit.Paging"
+    xmlns:controls="using:MyToolkit.Controls"
+    Loading="ContentDialog_Loading"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -38,14 +41,22 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="150"/>
+                            <RowDefinition Height="175"/>
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Row="0" Margin="8,0,0,0" Text="Cover Image" Style="{StaticResource SubtitleTextBlockStyle}"/>
                         <Grid Grid.Row="1" Margin="8,5,8,5">
                             <Rectangle Width="Auto" Height="3" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
                         </Grid>
-                        <Border x:Name="CVR_border" Grid.Row="2" BorderThickness="1" RequestedTheme="Default" Margin="15,5,15,5" Opacity="0.75">
-                        </Border>
+                        <controls:DataGrid x:Name="CVR_DataGrid" Grid.Row="2" Margin="15,5,15,5" SelectionMode="Single" RequestedTheme="Default" HorizontalAlignment="Stretch">
+                            <controls:DataGrid.Columns>
+                                <controls:DataGridTextColumn x:Name="CVR_lbl_xy" Width="75" Header="X,Y" Binding="{Binding CVR_XY}" CanSort="False" IsAscendingDefault="False"/>
+                                <controls:DataGridTextColumn x:Name="CVR_lbl_b" Width="75" Header="Blue" Binding="{Binding CVR_B}" CanSort="False" IsAscendingDefault="False"/>
+                                <controls:DataGridTextColumn x:Name="CVR_lbl_g" Width="75" Header="Green" Binding="{Binding CVR_G}" CanSort="False" IsAscendingDefault="False"/>
+                                <controls:DataGridTextColumn x:Name="CVR_lbl_r" Width="75" Header="Red" Binding="{Binding CVR_R}" CanSort="False" IsAscendingDefault="False"/>
+                                <controls:DataGridTextColumn x:Name="CVR_lbl_a" Width="75" Header="Alpha" Binding="{Binding CVR_A}" CanSort="False" IsAscendingDefault="False"/>
+                            </controls:DataGrid.Columns>
+                        </controls:DataGrid>
+
                     </Grid>
                     <StackPanel Grid.Row="1" Margin="50,15,50,10">
                         <Rectangle Margin="100,0,100,0" Width="Auto" Height="2" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
@@ -56,14 +67,21 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="150"/>
+                            <RowDefinition Height="175"/>
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Row="0" Margin="8,0,0,0" Text="Stego Image" Style="{StaticResource SubtitleTextBlockStyle}"/>
                         <Grid Grid.Row="1" Margin="8,5,8,5">
                             <Rectangle Width="Auto" Height="3" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
                         </Grid>
-                        <Border x:Name="STG_border" Grid.Row="2" BorderThickness="1" RequestedTheme="Default" Margin="15,5,15,5" Opacity="0.75">
-                        </Border>
+                        <controls:DataGrid x:Name="STG_DataGrid" Grid.Row="2" Margin="15,5,15,5" SelectionMode="Single" HorizontalAlignment="Stretch">
+                            <controls:DataGrid.Columns>
+                                <controls:DataGridTextColumn x:Name="STG_lbl_xy" Width="75" Header="X,Y" Binding="{Binding STG_XY}" CanSort="False" IsAscendingDefault="False"/>
+                                <controls:DataGridTextColumn x:Name="STG_lbl_b" Width="75" Header="Blue" Binding="{Binding STG_B}" CanSort="False" IsAscendingDefault="False"/>
+                                <controls:DataGridTextColumn x:Name="STG_lbl_g" Width="75" Header="Green" Binding="{Binding STG_G}" CanSort="False" IsAscendingDefault="False"/>
+                                <controls:DataGridTextColumn x:Name="STG_lbl_r" Width="75" Header="Red" Binding="{Binding STG_R}" CanSort="False" IsAscendingDefault="False"/>
+                                <controls:DataGridTextColumn x:Name="STG_lbl_a" Width="75" Header="Alpha" Binding="{Binding STG_A}" CanSort="False" IsAscendingDefault="False"/>
+                            </controls:DataGrid.Columns>
+                        </controls:DataGrid>
                     </Grid>
                     <StackPanel Grid.Row="3" Margin="50,15,50,10">
                         <Rectangle Margin="100,0,100,0" Width="Auto" Height="2" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>

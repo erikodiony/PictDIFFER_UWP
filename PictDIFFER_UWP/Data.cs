@@ -237,10 +237,16 @@ namespace PictDIFFER
             public static readonly string CVR_G = "CVR_G";
             public static readonly string CVR_R = "CVR_R";
             public static readonly string CVR_A = "CVR_A";
+            public static readonly string CVR_XY = "CVR_XY";
+
             public static readonly string STG_B = "STG_B";
             public static readonly string STG_G = "STG_G";
             public static readonly string STG_R = "STG_R";
             public static readonly string STG_A = "STG_A";
+            public static readonly string STG_XY = "STG_XY";
+
+            public static readonly string CORD_X = "CORD_X";
+            public static readonly string CORD_Y = "CORD_Y";
         }
         #endregion
     }
