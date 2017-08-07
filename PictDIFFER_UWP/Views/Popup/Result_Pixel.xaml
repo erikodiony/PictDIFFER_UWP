@@ -110,7 +110,7 @@
                             <TextBox Margin="5" x:Name="tbox_y" Width="Auto" PlaceholderText="Point Y"/>
                             <Button Margin="5" x:Name="btn_point" Content="Run" Click="btn_point_Click"/>
                             <ProgressRing Margin="5" x:Name="p_ring_xy" IsActive="True" Visibility="Collapsed"/>
-                            <TextBlock Margin="5" x:Name="lbl_err" Text="Error !" Visibility="Collapsed" FontSize="17" Style="{StaticResource BodyTextBlockStyle}"/>
+                            <TextBlock Margin="5" x:Name="lbl_err" Text="Error !" Visibility="Collapsed" FontSize="17" Style="{StaticResource BodyTextBlockStyle}" TextWrapping="Wrap"/>
                         </StackPanel>
                     </Grid>
                     <StackPanel Grid.Row="5" Margin="50,15,50,10">

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace PictDIFFER
 {
@@ -168,9 +164,9 @@ namespace PictDIFFER
         public static class Prop_AppDetail
         {
             public static readonly string title = "PictDIFFER";
-            public static readonly string version = "Version 1.0 (Build 201707)";
+            public static readonly string version = "Version 1.1 (Build 201708)";
             public static readonly string source_code = "Source Code (Github)";
-            public static readonly string source_code_link = "http://github.com/Erikodiony/PictDIFFER";
+            public static readonly string source_code_link = "http://github.com/Erikodiony/PictDIFFER_UWP";
             public static readonly string bug_support = "Bug / Support (Facebook)";
             public static readonly string bug_support_link = "http://facebook.com/erikodiony";
         }

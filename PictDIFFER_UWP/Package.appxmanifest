@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="cc7b133d-deac-4d2e-82f5-be036b1c245a" Publisher="CN=Erikodiony" Version="1.0.0.0" />
+  <Identity Name="ErikodionyAriessaWahyudi-PictDIFFER-UWP" Publisher="CN=Erikodiony" Version="1.1.0.0" />
   <mp:PhoneIdentity PhoneProductId="cc7b133d-deac-4d2e-82f5-be036b1c245a" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>PictDIFFER</DisplayName>
