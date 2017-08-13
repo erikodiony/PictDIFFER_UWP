@@ -1,4 +1,3 @@
-
 #PictDIFFER_UWP
 
 Merupakan aplikasi untuk menguji Stego Image dan Cover Image serta antara Original File dan Embedded File,.
