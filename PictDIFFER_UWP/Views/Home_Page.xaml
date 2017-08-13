@@ -81,11 +81,9 @@
                             </TextBlock>
                             <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="10,10,15,10" FontSize="18">                            
                     <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                        <Run Text="  Fast Embedding File/Message" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
+                        <Run Text="  Fast Calculate and Detection" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
                     <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                        <Run Text="  Fast Extracting File/Message" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
-                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                        <Run Text="  Secure with Password" FontWeight="SemiBold" FontStretch="SemiCondensed"/><LineBreak/>    
+                        <Run Text="  User Friendly Concept &amp; Easy to Use" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
                     <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
                         <Run Text="  Build with C# Windows UWP (Universal Windows Platform)" FontWeight="SemiBold" FontStretch="SemiCondensed"/><LineBreak/>
                     <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
