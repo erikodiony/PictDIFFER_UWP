@@ -15,8 +15,8 @@ namespace PictDIFFER.Controls
         #region Property Page
         public static class Prop_Page
         {
-            public static readonly string StegoPage = "Menu yang berfungsi untuk menguji hasil keluaran dari proses Embedding Steganography (Stego Image), Jenis uji yang digunakan yakni Histogram, Pixel Identify dan MSE & PSNR";
-            public static readonly string EmbeddedPage = "Menu yang berfungsi untuk menguji hasil keluaran dari proses Extracting Steganography (Embedded File), Jenis uji yang digunakan yakni MD5 Checksum";
+            public static readonly string StegoPage = "Menu yang berfungsi untuk menguji hasil keluaran dari proses Embedding Steganography (Stego Image), Jenis parameter uji yang digunakan yakni Histogram Data, Pixel Identify dan Count MSE & PSNR";
+            public static readonly string EmbeddedPage = "Menu yang berfungsi untuk menguji hasil keluaran dari proses Extracting Steganography (Embedded File), Jenis paramater uji yang digunakan yakni MD5 Hash Identify dan SHA1 Hash Identify";
             public static readonly string SettingsPage = "Menu yang berfungsi untuk mengganti Warna Latar Belakang (Change Background) beserta mengganti Efek Transisi Halaman (Change Transition Effect)";
             public static readonly string AboutPage = "Menu yang berisi tentang Detail Aplikasi (App Detail) beserta Info tentang Creator (About Me)";
         }
@@ -114,7 +114,7 @@ namespace PictDIFFER.Controls
         public static class Prop_Image_Stego
         {
             public static readonly string title = "Choose Stego Image";
-            public static readonly string subtitle = "(Pilih Stego Image yang telah ter-Embed didalamnya)";
+            public static readonly string subtitle = "(Format ekstensi file gambar yang didukung *.png)";
             public static readonly string button = "Choose Image";
             public static readonly string picker_status = "No Image";
             public static readonly string picker_path = "Path : ";
@@ -125,7 +125,7 @@ namespace PictDIFFER.Controls
         public static class Prop_Image_Cover
         {
             public static readonly string title = "Choose Cover Image";
-            public static readonly string subtitle = "(Pilih Cover Image yang telah ter-Embed didalamnya)";
+            public static readonly string subtitle = "(Format ekstensi file gambar yang didukung *.png)";
             public static readonly string button = "Choose Image";
             public static readonly string picker_status = "No Image";
             public static readonly string picker_path = "Path : ";
