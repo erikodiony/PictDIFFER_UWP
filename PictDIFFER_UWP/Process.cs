@@ -265,7 +265,6 @@ namespace PictDIFFER
             public static void SetTips(string value)
             {
                 ApplicationData.Current.LocalSettings.Values["Tips_set"] = value;
-                System.Diagnostics.Debug.WriteLine(value);
             }
             #endregion
         }
