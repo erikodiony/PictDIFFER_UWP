@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 
 using PictDIFFER.Views.Popup;
-using static PictDIFFER.Data;
+using static PictDIFFER.Controls.Data;
 
 namespace PictDIFFER
 {

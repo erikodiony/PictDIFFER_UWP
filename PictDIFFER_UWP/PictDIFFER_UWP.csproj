@@ -102,12 +102,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Data.cs" />
+    <Compile Include="Controls\Data.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PopupDialog.cs" />
-    <Compile Include="Process.cs" />
+    <Compile Include="Controls\PopupDialog.cs" />
+    <Compile Include="Controls\Process.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\About_Page.xaml.cs">
       <DependentUpon>About_Page.xaml</DependentUpon>

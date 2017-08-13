@@ -13,11 +13,12 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Media.Imaging;
 
-using static PictDIFFER.Data.Prop_Popup;
-using static PictDIFFER.Data.Prop_Popup.Title;
+using static PictDIFFER.Controls.Data.Prop_Popup;
+using static PictDIFFER.Controls.Data.Prop_Popup.Title;
 
 using AForge.Imaging;
 using System.Drawing;
+using PictDIFFER.Controls;
 
 namespace PictDIFFER
 {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PictDIFFER.Controls;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,8 +15,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
-using static PictDIFFER.Data.Prop_Popup;
-using static PictDIFFER.Data.Prop_Popup.Title;
+using static PictDIFFER.Controls.Data.Prop_Popup;
+using static PictDIFFER.Controls.Data.Prop_Popup.Title;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 

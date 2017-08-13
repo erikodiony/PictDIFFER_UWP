@@ -9,6 +9,7 @@ using Windows.UI;
 using System.Threading.Tasks;
 using Windows.Storage.Streams;
 using Windows.Graphics.Imaging;
+using PictDIFFER.Controls;
 
 // The Content Dialog item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 

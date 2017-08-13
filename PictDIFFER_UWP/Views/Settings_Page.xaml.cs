@@ -1,4 +1,5 @@
-﻿using Windows.Storage;
+﻿using PictDIFFER.Controls;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -21,7 +22,7 @@ namespace PictDIFFER.Views
             Init_Theme();
             Init_Transition();
             Init_Tips();
-            HeaderInfo.Text = Data.Prop_Page.SettingsPage;
+            Init_Page();
         }
 
         #region Trigger Toggle Switch
@@ -93,6 +94,12 @@ namespace PictDIFFER.Views
                 Tips_Prop2.Visibility = Visibility.Collapsed;
                 Tips_Prop3.Margin = new Thickness(0, -5, 0, 0);
             }
+        }
+        #endregion
+        #region Initializing Property
+        private void Init_Page()
+        {
+            HeaderInfo.Text = Data.Prop_Page.SettingsPage;
         }
         #endregion
     }

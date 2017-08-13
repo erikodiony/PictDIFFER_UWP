@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PictDIFFER
+namespace PictDIFFER.Controls
 {
     class Data
     {
