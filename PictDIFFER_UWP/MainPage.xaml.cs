@@ -114,7 +114,7 @@ namespace PictDIFFER
         private void Init_Tips()
         {
             string value = (string)ApplicationData.Current.LocalSettings.Values["Tips_set"];
-            var setTips = Process.Tips.GetTips(value) == true ? Toggle_Tips.IsOn = true : Toggle_Tips.IsOn = false;
+            var setTips = Process.Tips.GetTips(value) == false ? Toggle_Tips.IsOn = false : Toggle_Tips.IsOn = true;
             Process.Tips.SetTips(setTips.ToString());
         }
         #endregion

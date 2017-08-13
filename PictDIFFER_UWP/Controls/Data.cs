@@ -167,8 +167,8 @@ namespace PictDIFFER.Controls
             public static readonly string version = "Version 1.1 (Build 201708)";
             public static readonly string source_code = "Source Code (Github)";
             public static readonly string source_code_link = "http://github.com/Erikodiony/PictDIFFER_UWP";
-            public static readonly string bug_support = "Bug / Support (Facebook)";
-            public static readonly string bug_support_link = "http://facebook.com/erikodiony";
+            public static readonly string bug_support = "Bug / Support (Twitter)";
+            public static readonly string bug_support_link = "https://twitter.com/erikodiony";
         }
         public static class Prop_AboutMe
         {

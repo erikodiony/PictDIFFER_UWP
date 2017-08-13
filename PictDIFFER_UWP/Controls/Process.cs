@@ -135,7 +135,7 @@ namespace PictDIFFER
             #region GetTheme from Storage
             public static bool GetTips(string getTips)
             {
-                bool value = (getTips == "True") ? true : false;
+                bool value = (getTips == "False") ? false : true;
                 return value;
             }
             #endregion
