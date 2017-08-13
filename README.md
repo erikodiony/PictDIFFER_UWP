@@ -8,3 +8,5 @@ Merupakan aplikasi untuk menguji Stego Image dan Cover Image serta antara Origin
 ./Membutuhkan VS 2015 Update 3,.
 
 ./Merupakan Program Skripsi, Teknik Informatika,.
+
+./Dibangun menggunakan C# + XAML = UWP (Universal Windows Platform),.
