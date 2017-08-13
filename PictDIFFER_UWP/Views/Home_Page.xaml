@@ -72,8 +72,8 @@
                     <ScrollViewer Grid.Column="2" Margin="15,20,0,20" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
                         <StackPanel>
                             <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="15,0,15,10" FontSize="18">
-                        <Run FontWeight="SemiBold">Stego++ with Password</Run> merupakan aplikasi yang berfungsi untuk menyembunyikan suatu <Run FontWeight="SemiBold" FontStyle="Italic" Text="File/Message"/> ke dalam suatu Citra Digital 2D berformat PNG dengan kedalaman warna 32bit. 
-                    Untuk penyisipannya menggunakan teknik <Run FontWeight="SemiBold" FontStyle="Italic" Text="Steganografi Least Significant Bit (LSB)"/>. Adapun untuk keamanannya mengunakan teknik <Run FontWeight="SemiBold" FontStyle="Italic" Text="Kriptografi Bifid Cipher"/> pada susunan Karakter Password + Message yang akan disembunyikan.
+                                <Run FontWeight="SemiBold">PictDIFFER</Run> merupakan aplikasi yang berfungsi untuk mengecek dan membandingkan kualitas suatu Citra Digital hasil pengolahan Steganografi <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Stego Image)"/> dengan Citra Digital asli <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Cover Image)"/>.
+                    Adapun Format Citra Digital yang didukung adalah Citra Digital dengan Format PNG dengan kedalaman warna 32bit / (BGRA).
                             </TextBlock>
                             <TextBlock Style="{StaticResource TitleTextBlockStyle}" Margin="15,5,15,5" >
                     <Run Text="&#xE1A6;" FontFamily="Segoe MDL2 Assets"/>
