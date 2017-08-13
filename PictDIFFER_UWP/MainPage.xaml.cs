@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Windows.Foundation.Metadata;
 using Windows.Graphics.Display;
 using Windows.Storage;
@@ -21,6 +22,8 @@ namespace PictDIFFER
         {
             InitializeComponent();
             ShowStatusBar();
+            Init_Theme();
+            Init_Transition();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -44,7 +47,7 @@ namespace PictDIFFER
                 switch (button.Content.ToString())
                 {
                     case "Home":
-                        Info_Page.Visibility = Visibility.Visible;
+                        Info_Page.Visibility = Visibility.Collapsed;
                         MyFrame.Navigate(typeof(Views.Home_Page));
                         break;
                     case "Stego Image Test":
@@ -77,9 +80,51 @@ namespace PictDIFFER
         {
             if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
             {
-                var statusBar = StatusBar.GetForCurrentView();
+                StatusBar.GetForCurrentView();
             }
         }
 
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            Init_Tips();
+        }
+
+        private bool CheckStatusTips()
+        {
+            return true;
+        }
+
+
+        #region Initializing Animation
+        private void Init_Transition()
+        {
+            string value = (string)ApplicationData.Current.LocalSettings.Values["Effect_set"];
+            Transitions = Process.Transition.GetTransition(value);
+            Process.Transition.SetTransition(value);
+        }
+        private void Init_Theme()
+        {
+            string value = (string)ApplicationData.Current.LocalSettings.Values["BG_set"];
+            var setTheme = Process.Theme.GetTheme(value) == true ? RequestedTheme = ElementTheme.Light : RequestedTheme = ElementTheme.Dark;
+            Process.Theme.SetTheme(setTheme.ToString());
+        }
+        #endregion
+
+        #region Initializing Tips
+        private void Init_Tips()
+        {
+            string value = (string)ApplicationData.Current.LocalSettings.Values["Tips_set"];
+            var setTips = Process.Tips.GetTips(value) == true ? Toggle_Tips.IsOn = true : Toggle_Tips.IsOn = false;
+            Process.Tips.SetTips(setTips.ToString());
+        }
+        #endregion
+
+        private void Toggle_Tips_Toggled(object sender, RoutedEventArgs e)
+        {
+            string value = String.Empty;
+            if (Toggle_Tips.IsOn == true) value = "True"; else value = "False";
+            Process.Tips.SetTips(value);
+            MyFrame.Navigate(MyFrame.SourcePageType);
+        }
     }
 }

@@ -35,6 +35,7 @@ namespace PictDIFFER.Views
         {
             Init_Theme();
             Init_Transition();
+            Init_Tips();
             Init_Page();
         }
 
@@ -118,6 +119,24 @@ namespace PictDIFFER.Views
             string value = (string)ApplicationData.Current.LocalSettings.Values["BG_set"];
             var setTheme = Process.Theme.GetTheme(value) == true ? RequestedTheme = ElementTheme.Light : RequestedTheme = ElementTheme.Dark;
             Process.Theme.SetTheme(setTheme.ToString());
+        }
+        #endregion
+        #region Initializing Tips
+        private void Init_Tips()
+        {
+            string value = (string)ApplicationData.Current.LocalSettings.Values["Tips_set"];
+            if (value == "True")
+            {
+                Tips_Prop.Visibility = Visibility.Visible;
+                Tips_Prop2.Visibility = Visibility.Visible;
+                Tips_Prop3.Margin = new Thickness(0, 0, 0, 0);
+            }
+            else
+            {
+                Tips_Prop.Visibility = Visibility.Collapsed;
+                Tips_Prop2.Visibility = Visibility.Collapsed;
+                Tips_Prop3.Margin = new Thickness(0, -20, 0, 0);
+            }
         }
         #endregion
 

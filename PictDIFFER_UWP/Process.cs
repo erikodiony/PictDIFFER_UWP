@@ -251,6 +251,25 @@ namespace PictDIFFER
             }
         }
         #endregion
+        #region Process ShowTips
+        public class Tips
+        {
+            #region GetTheme from Storage
+            public static bool GetTips(string getTips)
+            {
+                bool value = (getTips == "True") ? true : false;
+                return value;
+            }
+            #endregion
+            #region SetTheme to Storage
+            public static void SetTips(string value)
+            {
+                ApplicationData.Current.LocalSettings.Values["Tips_set"] = value;
+                System.Diagnostics.Debug.WriteLine(value);
+            }
+            #endregion
+        }
+        #endregion
         #region Data Storage
         public class GetData
         {
