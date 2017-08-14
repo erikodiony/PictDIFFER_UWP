@@ -19,7 +19,7 @@
     <PackageCertificateKeyFile>PictDIFFER_UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
-    <AppxBundlePlatforms>arm</AppxBundlePlatforms>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
     <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
     <PackageCertificateThumbprint>A29CE9DB808C3633BCA09A934537DB7EC4C58A3A</PackageCertificateThumbprint>
   </PropertyGroup>
