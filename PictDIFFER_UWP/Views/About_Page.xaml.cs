@@ -74,7 +74,6 @@ namespace PictDIFFER.Views
         {
             string value = (string)ApplicationData.Current.LocalSettings.Values["BG_set"];
             var setTheme = Process.Theme.GetTheme(value) == true ? RequestedTheme = ElementTheme.Light : RequestedTheme = ElementTheme.Dark;
-            if (RequestedTheme == ElementTheme.Light) Logo_Black.Visibility = Visibility.Visible; else Logo_White.Visibility = Visibility.Visible;
             Process.Theme.SetTheme(setTheme.ToString());
         }
         #endregion

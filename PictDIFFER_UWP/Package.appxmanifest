@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="ErikodionyAriessaWahyudi-PictDIFFER-UWP" Publisher="CN=Erikodiony" Version="1.1.0.0" />
+  <Identity Name="ErikodionyAW-PictDIFFER" Publisher="CN=Erikodiony" Version="1.1.0.0" />
   <mp:PhoneIdentity PhoneProductId="cc7b133d-deac-4d2e-82f5-be036b1c245a" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>PictDIFFER</DisplayName>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="PictDIFFER.App">
-      <uap:VisualElements DisplayName="PictDIFFER" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="PictDIFFER" BackgroundColor="transparent">
+      <uap:VisualElements DisplayName="PictDIFFER" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="PictDIFFER" BackgroundColor="#8B8B8B">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="PictDIFFER">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="wide310x150Logo" />

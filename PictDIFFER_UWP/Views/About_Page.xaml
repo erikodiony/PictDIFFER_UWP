@@ -77,10 +77,7 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
-                                <Border x:Name="Logo_Black" BorderThickness="1" BorderBrush="Black" Grid.Column="0" Grid.Row="0" Visibility="Collapsed">
-                                    <Image Width="Auto" Source="../Assets/MyLogo_B.png" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                                </Border>
-                                <Border x:Name="Logo_White" BorderThickness="1" BorderBrush="White" Grid.Column="0" Grid.Row="0" Visibility="Collapsed">
+                                <Border Grid.Column="0" Grid.Row="0" Background="#8B8B8B">
                                     <Image Width="Auto" Source="../Assets/MyLogo_W.png" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                                 </Border>
                                 <TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Grid.Row="0" Grid.Column="1"  Margin="15,0,0,0">
