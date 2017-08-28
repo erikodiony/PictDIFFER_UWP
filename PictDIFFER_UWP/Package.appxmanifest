@@ -4,7 +4,7 @@
   <mp:PhoneIdentity PhoneProductId="cc7b133d-deac-4d2e-82f5-be036b1c245a" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>PictDIFFER</DisplayName>
-    <PublisherDisplayName>Erikodiony</PublisherDisplayName>
+    <PublisherDisplayName>Erikodiony Ariessa Wahyudi</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -21,11 +21,15 @@
             <uap:ShowOn Tile="wide310x150Logo" />
           </uap:ShowNameOnTiles>
         </uap:DefaultTile>
-        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#8B8B8B" />
       </uap:VisualElements>
     </Application>
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
+    <uap:Capability Name="musicLibrary" />
+    <uap:Capability Name="picturesLibrary" />
+    <uap:Capability Name="removableStorage" />
+    <uap:Capability Name="videosLibrary" />
   </Capabilities>
 </Package>

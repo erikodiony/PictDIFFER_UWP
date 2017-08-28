@@ -207,7 +207,7 @@
                                     <Run Text="&#xE7B4;" FontFamily="Assets/Fonts/HOLOMDL2.TTF#HoloLens MDL2 Assets"/>
                                     <Run Text="Embedded File Test"/>
                                 </TextBlock>
-                                <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" Grid.Row="1">
+                                <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" Grid.Row="1" FontSize="18">
                                     Merupakan fitur yang berfungsi untuk menguji file asli <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Original File)"/> dengan file hasil ekstraksi Stego Image <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Embedded File)"/>. Adapun proses pengujian menggunakan parameter-parameter uji berikut:
                                 </TextBlock>
                                 <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" FontSize="18" Grid.Row="2">
