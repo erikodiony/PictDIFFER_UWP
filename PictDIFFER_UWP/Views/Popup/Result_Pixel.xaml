@@ -24,7 +24,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0" Margin="10,0,0,0" HorizontalAlignment="Stretch">
-                <TextBlock Text="&#xE80A;" FontFamily="Segoe MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                <TextBlock Text="&#xE80A;" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
             </StackPanel>
             <Rectangle Grid.Column="1" Margin="10,0,0,0" Width="2" Height="Auto" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
             <ScrollViewer Grid.Column="2" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
@@ -109,7 +109,7 @@
                             <TextBox Margin="5" x:Name="tbox_y" Width="Auto" PlaceholderText="Point Y"/>
                             <Button Margin="5" x:Name="btn_point" Content="Run" Click="btn_point_Click"/>
                             <ProgressRing Margin="5" x:Name="p_ring_xy" IsActive="True" Visibility="Collapsed"/>
-                            <TextBlock Margin="5" x:Name="lbl_err" Text="&#xE711;" FontFamily="Segoe MDL2 Assets" Visibility="Collapsed" FontSize="20" Style="{StaticResource BodyTextBlockStyle}" Foreground="{ThemeResource SystemControlForegroundAccentBrush}" TextWrapping="Wrap"/>
+                            <TextBlock Margin="5" x:Name="lbl_err" Text="&#xE711;" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets" Visibility="Collapsed" FontSize="20" Style="{StaticResource BodyTextBlockStyle}" Foreground="{ThemeResource SystemControlForegroundAccentBrush}" TextWrapping="Wrap"/>
                         </StackPanel>
                     </Grid>
                     <StackPanel Grid.Row="5" Margin="50,15,50,10">
