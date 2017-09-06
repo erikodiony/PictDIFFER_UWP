@@ -26,10 +26,10 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0">
-                    <TextBlock Text="&#xE99A;" FontFamily="Segoe MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                    <TextBlock Text="&#xE99A;" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
                 </StackPanel>
                 <Rectangle Grid.Column="1" Margin="15,0,15,0" Width="2" Height="Auto" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
-                <Image Grid.Column="2" Width="Auto" Height="Auto" Margin="0,-5,0,0" Source="../Assets/Header-PictDIFFER-200.png" Stretch="Fill" HorizontalAlignment="Stretch"/>
+                <Image Grid.Column="2" Width="Auto" Height="Auto" Margin="0,-5,0,0" Source="ms-appx:///Assets/Header-PictDIFFER-200.png" Stretch="Fill" HorizontalAlignment="Stretch"/>
             </Grid>
         </StackPanel>
         <!--Header Menu-->
@@ -59,7 +59,7 @@
 
                     <!--Pivot 1 Column 1-->
                     <StackPanel Grid.Column="0">
-                        <TextBlock Text="&#xE1C3;" Margin="15,20,0,0" FontFamily="Segoe MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                        <TextBlock Text="&#xE1C3;" Margin="15,20,0,0" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
                     </StackPanel>
                     <!--Pivot 1 Column 1-->
 
@@ -75,17 +75,17 @@
                     Adapun Format Citra Digital yang didukung adalah Citra Digital dengan Format PNG dengan kedalaman warna 32bit / (BGRA).
                             </TextBlock>
                             <TextBlock Style="{StaticResource TitleTextBlockStyle}" Margin="15,5,15,5" >
-                    <Run Text="&#xE1A6;" FontFamily="Segoe MDL2 Assets"/>
+                    <Run Text="&#xE1A6;" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets"/>
                     <Run Text="Feature + Benefit"/>
                             </TextBlock>
                             <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="10,10,15,10" FontSize="18">                            
-                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets"/>
                         <Run Text="  Fast Calculate and Detection" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
-                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets"/>
                         <Run Text="  User Friendly Concept &amp; Easy to Use" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
-                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets"/>
                         <Run Text="  Build with C# Windows UWP (Universal Windows Platform)" FontWeight="SemiBold" FontStretch="SemiCondensed"/><LineBreak/>
-                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets"/>
                         <Run Text="  Support on All Windows 10 Platform (PC / Mobile)" FontWeight="SemiBold" FontStretch="SemiCondensed"/>
                             </TextBlock>
                         </StackPanel>
@@ -106,7 +106,7 @@
 
                     <!--Pivot 2 Column 1-->
                     <StackPanel Grid.Column="0" Margin="15,20,0,0">
-                        <TextBlock Text="&#xE128;" FontFamily="Segoe MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                        <TextBlock Text="&#xE128;" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
                     </StackPanel>
                     <!--Pivot 2 Column 1-->
 
@@ -144,25 +144,25 @@
                                 </Grid.RowDefinitions>
 
                                 <TextBlock Style="{StaticResource TitleTextBlockStyle}" Grid.Row="0">
-                                    <Run Text="&#xE7AA;" FontFamily="Assets/Fonts/HOLOMDL2.TTF#HoloLens MDL2 Assets"/>
+                                    <Run Text="&#xE7AA;" FontFamily="ms-appx:///Assets/Fonts/HOLOMDL2.TTF#HoloLens MDL2 Assets"/>
                                     <Run Text="Stego Image Test"/>
                                 </TextBlock>
                                 <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" Grid.Row="1" FontSize="18">
                                         Merupakan fitur yang berfungsi untuk menguji Stego Image dan Cover Image dengan menggunakan parameter-parameter uji berikut:
                                 </TextBlock>
                                 <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" FontSize="18" Grid.Row="2">
-                                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets"/>
                                     <Run Text="  Histogram Data" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
-                                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets"/>
                                     <Run Text="  Pixel Identify" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
-                                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets"/>
                                     <Run Text="  Count MSE &amp; PSNR" FontStretch="SemiCondensed" FontWeight="SemiBold"/>
                                 </TextBlock>
                                 <Grid Margin="0,0,0,0" Grid.Row="3">
                                     <Rectangle Margin="125,20,125,20" Width="Auto" Height="2" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
                                 </Grid>
                                 <TextBlock Style="{StaticResource TitleTextBlockStyle}"  Grid.Row="4">
-                                    <Run Text="&#xE9D2;" FontFamily="Segoe MDL2 Assets"/>
+                                    <Run Text="&#xE9D2;" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets"/>
                                     <Run Text="Histogram Data"/>
                                 </TextBlock>
                                 <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" FontSize="18" Margin="5" Grid.Row="5">
@@ -170,7 +170,7 @@
                                     <LineBreak/>
                                 </TextBlock>
                                 <TextBlock Style="{StaticResource TitleTextBlockStyle}" Grid.Row="6">
-                                    <Run Text="&#xE80A;" FontFamily="Segoe MDL2 Assets"/>
+                                    <Run Text="&#xE80A;" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets"/>
                                     <Run Text="Pixel Identify"/>
                                 </TextBlock>
                                 <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" FontSize="18" Margin="5" Grid.Row="7">
@@ -178,7 +178,7 @@
                                     <LineBreak/>
                                 </TextBlock>
                                 <TextBlock Style="{StaticResource TitleTextBlockStyle}"  Grid.Row="8">
-                                    <Run Text="&#xEB3C;" FontFamily="Segoe MDL2 Assets"/>
+                                    <Run Text="&#xEB3C;" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets"/>
                                     <Run Text="Count MSE &amp; PSNR"/>
                                 </TextBlock>
                                 <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" FontSize="18" Margin="5" Grid.Row="9">
@@ -204,23 +204,23 @@
                                 </Grid.RowDefinitions>
 
                                 <TextBlock Style="{StaticResource TitleTextBlockStyle}" Grid.Row="0">
-                                    <Run Text="&#xE7B4;" FontFamily="Assets/Fonts/HOLOMDL2.TTF#HoloLens MDL2 Assets"/>
+                                    <Run Text="&#xE7B4;" FontFamily="ms-appx:///Assets/Fonts/HOLOMDL2.TTF#HoloLens MDL2 Assets"/>
                                     <Run Text="Embedded File Test"/>
                                 </TextBlock>
                                 <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" Grid.Row="1" FontSize="18">
                                     Merupakan fitur yang berfungsi untuk menguji file asli <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Original File)"/> dengan file hasil ekstraksi Stego Image <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Embedded File)"/>. Adapun proses pengujian menggunakan parameter-parameter uji berikut:
                                 </TextBlock>
                                 <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" FontSize="18" Grid.Row="2">
-                                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets"/>
                                     <Run Text="  MD5 Hash Identify" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
-                                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                                    <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets"/>
                                     <Run Text="  SHA1 Hash Identify" FontStretch="SemiCondensed" FontWeight="SemiBold"/>
                                 </TextBlock>
                                 <Grid Margin="0,0,0,0" Grid.Row="3">
                                     <Rectangle Margin="125,20,125,20" Width="Auto" Height="2" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
                                 </Grid>
                                 <TextBlock Style="{StaticResource TitleTextBlockStyle}"  Grid.Row="4">
-                                    <Run Text="&#xE8D7;" FontFamily="Segoe MDL2 Assets"/>
+                                    <Run Text="&#xE8D7;" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets"/>
                                     <Run Text="MD5 Hash Identify"/>
                                 </TextBlock>
                                 <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" FontSize="18" Margin="5" Grid.Row="5">
@@ -228,7 +228,7 @@
                                     <LineBreak/>
                                 </TextBlock>
                                 <TextBlock Style="{StaticResource TitleTextBlockStyle}" Grid.Row="6">
-                                    <Run Text="&#xE8D7;" FontFamily="Segoe MDL2 Assets"/>
+                                    <Run Text="&#xE8D7;" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets"/>
                                     <Run Text="SHA1 Hash Identify"/>
                                 </TextBlock>
                                 <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" FontSize="18" Margin="5" Grid.Row="7">

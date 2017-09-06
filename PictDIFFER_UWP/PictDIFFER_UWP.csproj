@@ -94,7 +94,8 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Content Include="Assets\Fonts\HOLOMDL2.TTF" />
+    <Content Include="Assets\Fonts\holomdl2.ttf" />
+    <Content Include="Assets\Fonts\segoemdl2.ttf" />
     <None Include="PictDIFFER_UWP.pfx" />
     <None Include="project.json" />
   </ItemGroup>

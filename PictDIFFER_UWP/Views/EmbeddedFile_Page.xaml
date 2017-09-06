@@ -47,7 +47,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0">
-                    <TextBlock Text="&#xEA80;" FontFamily="Segoe MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                    <TextBlock Text="&#xEA80;" FontFamily="ms-appx:///Assets/Fonts/segoemdl2.ttf#Segoe MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
                 </StackPanel>
                 <Rectangle Grid.Column="1" Margin="15,0,15,0" Width="2" Height="Auto" Fill="{ThemeResource SystemControlForegroundAccentBrush}"/>
                 <TextBlock x:Name="HeaderInfo" Grid.Column="2" Margin="5,0,5,0" Style="{StaticResource BaseTextBlockStyle}" FontStretch="SemiCondensed">
@@ -92,7 +92,7 @@
 
                     <!--Pivot 1 Column 1-->
                     <StackPanel Grid.Column="0" Margin="15,20,0,0">
-                        <TextBlock Text="&#xE7B4;" FontFamily="Assets/Fonts/HOLOMDL2.TTF#HoloLens MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                        <TextBlock Text="&#xE7B4;" FontFamily="ms-appx:///Assets/Fonts/holomdl2.ttf#HoloLens MDL2 Assets" FontWeight="Normal" Style="{StaticResource SubheaderTextBlockStyle}"/>
                     </StackPanel>
                     <!--Pivot 1 Column 1-->
 
