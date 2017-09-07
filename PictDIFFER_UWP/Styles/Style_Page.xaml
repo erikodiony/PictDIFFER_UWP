@@ -127,7 +127,7 @@
                             <Grid x:Name="NotCheckedBackground" Grid.ColumnSpan="4">
                                 <Rectangle Height="48" VerticalAlignment="Center" HorizontalAlignment="Left" Width="245" x:Name="PressedBackground" Visibility="Collapsed" Fill="White" Opacity="0.5"/>
                                 <Rectangle Height="48" VerticalAlignment="Center" HorizontalAlignment="Left" Width="245" x:Name="HoverBackground" Visibility="Collapsed" Fill="White" Opacity="0.15"/>
-                                <Grid x:Name="CheckedBackground" VerticalAlignment="Center" HorizontalAlignment="Left" Width="245" Height="48" Visibility="Collapsed" Background="{ThemeResource SystemControlBackgroundAltHighBrush}" Opacity="0.7"/>
+                                <Grid x:Name="CheckedBackground" VerticalAlignment="Center" HorizontalAlignment="Left" Width="245" Height="48" Visibility="Collapsed" Background="{ThemeResource SystemControlBackgroundAltMediumLowBrush}" Opacity="0.7"/>
                                 <Grid x:Name="SelectedPipe" VerticalAlignment="Center" HorizontalAlignment="Left" Width="4" Height="48" Visibility="Collapsed" Background="#FFFFFF" Opacity="1"/>
                             </Grid>
                             <!-- focus -->
