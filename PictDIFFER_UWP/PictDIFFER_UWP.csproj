@@ -16,12 +16,12 @@
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>PictDIFFER_UWP.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>PictDIFFER_UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
     <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
-    <PackageCertificateThumbprint>A29CE9DB808C3633BCA09A934537DB7EC4C58A3A</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>A11C88AA0ECDC16F4528C5C51E7FB0CAB51E8CC8</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -96,7 +96,7 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <Content Include="Assets\Fonts\holomdl2.ttf" />
     <Content Include="Assets\Fonts\segoemdl2.ttf" />
-    <None Include="PictDIFFER_UWP.pfx" />
+    <None Include="PictDIFFER_UWP_TemporaryKey.pfx" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
